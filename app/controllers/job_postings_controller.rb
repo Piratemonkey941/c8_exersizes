@@ -10,4 +10,11 @@ class JobPostingsController < ApplicationController
     end
 
   end
+
+  def remote_jobs_list
+    @remote_jobs = JobPosting.where(location: "Remote")  #remote must be capitalized
+  end
 end
+
+
+# job types Remote, hybrid, On-Site

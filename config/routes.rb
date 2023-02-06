@@ -6,5 +6,11 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   resources :job_postings, only: :index
-  
+  resources :job_postings do
+    collection do
+      get 'remote_jobs_list'
+    end
+  end
+
+ 
 end

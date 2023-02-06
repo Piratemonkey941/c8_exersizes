@@ -1,0 +1,35 @@
+<div class="d-flex justify-content-center m-3">
+  <div class="your-div">
+    <h1>Remote Job Postings</h1>
+  </div>
+</div>
+<div class="d-flex justify-content-center m-3">
+    <div class="your-div">
+        <table>
+            <thead>
+                <tr>
+                <th>Title</th>
+                <th>Company</th>
+                <th>Salary</th>
+                <th>Location</th>
+                </tr>
+            </thead>
+            <tbody class="mt-3">
+                <% @remote_jobs.each do |remote_job| %>
+                <tr>
+                    <td><%= remote_job.title %></td>
+                    <td><%= remote_job.company %></td>
+                    <td><%= remote_job.salary %></td>
+                    <td><%= remote_job.location %></td>
+                </tr>
+                <% end %>
+            </tbody>
+            </table>
+  </div>
+</div>
+<div class="d-flex justify-content-center m-3">
+    <div class="your-div">
+        <%= link_to "Back to All Job Postings", job_postings_path, class: "btn btn-secondary" %>
+
+  </div>
+</div>
